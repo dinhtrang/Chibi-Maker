@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
+    <device id="retina6_1" orientation="landscape" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Game View Controller-->
+        <scene sceneID="tXr-a1-R10">
+            <objects>
+                <viewController storyboardIdentifier="GameViewController" id="BV1-FR-VrT" customClass="GameViewController" customModule="Chibi" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="3se-qz-xqx" customClass="SKView">
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="4qk-I5-YsI"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="46" y="56"/>
+        </scene>
+        <!--Splash Screen-->
+        <scene sceneID="iPw-eF-XAO">
+            <objects>
+                <viewController storyboardIdentifier="SplashScreen" id="myT-Ye-a9X" customClass="SplashScreen" customModule="Chibi" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="C3K-TJ-JVZ" customClass="SKView">
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background.png" translatesAutoresizingMaskIntoConstraints="NO" id="x0A-0C-CEE">
+                                <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="play" translatesAutoresizingMaskIntoConstraints="NO" id="wjD-1Y-WtD">
+                                <rect key="frame" x="78" y="110" width="740" height="114"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="114" id="dym-jd-piW"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JoI-bt-n5I">
+                                <rect key="frame" x="78" y="110" width="740" height="114"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title=" "/>
+                                <connections>
+                                    <action selector="anActionWith_sender:" destination="myT-Ye-a9X" eventType="touchUpInside" id="dGg-7w-aSo"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="giR-r6-Opg"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="giR-r6-Opg" firstAttribute="trailing" secondItem="wjD-1Y-WtD" secondAttribute="trailing" constant="30" id="0p8-5b-iZC"/>
+                            <constraint firstItem="JoI-bt-n5I" firstAttribute="trailing" secondItem="wjD-1Y-WtD" secondAttribute="trailing" id="JnU-7n-t7C"/>
+                            <constraint firstItem="wjD-1Y-WtD" firstAttribute="top" secondItem="giR-r6-Opg" secondAttribute="top" constant="110" id="LM3-11-Ven"/>
+                            <constraint firstItem="x0A-0C-CEE" firstAttribute="leading" secondItem="C3K-TJ-JVZ" secondAttribute="leading" id="OAF-Ik-uBj"/>
+                            <constraint firstItem="JoI-bt-n5I" firstAttribute="bottom" secondItem="wjD-1Y-WtD" secondAttribute="bottom" id="VHa-UO-ncN"/>
+                            <constraint firstItem="wjD-1Y-WtD" firstAttribute="leading" secondItem="giR-r6-Opg" secondAttribute="leading" constant="30" id="cku-3y-vq5"/>
+                            <constraint firstAttribute="trailing" secondItem="x0A-0C-CEE" secondAttribute="trailing" id="hKh-VD-81n"/>
+                            <constraint firstItem="JoI-bt-n5I" firstAttribute="leading" secondItem="wjD-1Y-WtD" secondAttribute="leading" id="hOp-rs-s4F"/>
+                            <constraint firstItem="x0A-0C-CEE" firstAttribute="top" secondItem="C3K-TJ-JVZ" secondAttribute="top" id="lwO-CC-gih"/>
+                            <constraint firstItem="JoI-bt-n5I" firstAttribute="top" secondItem="wjD-1Y-WtD" secondAttribute="top" id="v1p-Vs-jXd"/>
+                            <constraint firstAttribute="bottom" secondItem="x0A-0C-CEE" secondAttribute="bottom" id="z55-ji-fRw"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jbU-Op-PyJ" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="45.535714285714285" y="55.072463768115945"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Background.png" width="1280" height="720"/>
+        <image name="play" width="812" height="152"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,604 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 60;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		486128362D42A6A500226049 /* GoogleMobileAds.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 486128352D42A6A500226049 /* GoogleMobileAds.xcframework */; };
+		A60B22B8298E1A650046A2F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60B22B7298E1A650046A2F6 /* AppDelegate.swift */; };
+		A60B22BA298E1A650046A2F6 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = A60B22B9298E1A650046A2F6 /* GameScene.sks */; };
+		A60B22BC298E1A650046A2F6 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = A60B22BB298E1A650046A2F6 /* Actions.sks */; };
+		A60B22BE298E1A650046A2F6 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60B22BD298E1A650046A2F6 /* GameScene.swift */; };
+		A60B22C0298E1A650046A2F6 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60B22BF298E1A650046A2F6 /* GameViewController.swift */; };
+		A60B22C3298E1A650046A2F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A60B22C1298E1A650046A2F6 /* Main.storyboard */; };
+		A60B22C5298E1A670046A2F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A60B22C4298E1A670046A2F6 /* Assets.xcassets */; };
+		A60B22C8298E1A670046A2F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A60B22C6298E1A670046A2F6 /* LaunchScreen.storyboard */; };
+		A60B22DC298E1A670046A2F6 /* ChibiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60B22DB298E1A670046A2F6 /* ChibiUITests.swift */; };
+		A60B22DE298E1A670046A2F6 /* ChibiUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60B22DD298E1A670046A2F6 /* ChibiUITestsLaunchTests.swift */; };
+		A60B22EB298E1C9B0046A2F6 /* Images in Resources */ = {isa = PBXBuildFile; fileRef = A60B22EA298E1C9B0046A2F6 /* Images */; };
+		A62666DC299BF697004D1F77 /* MouthCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A62666DA299BF697004D1F77 /* MouthCell.swift */; };
+		A62666DD299BF697004D1F77 /* MouthCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A62666DB299BF697004D1F77 /* MouthCell.xib */; };
+		A657DFD629915CBB00BD7F84 /* PlayerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A657DFD529915CBB00BD7F84 /* PlayerCell.xib */; };
+		A657DFD829915E0F00BD7F84 /* PlayerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A657DFD729915E0F00BD7F84 /* PlayerCell.swift */; };
+		A657DFDB2991677300BD7F84 /* ServiceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A657DFD92991677300BD7F84 /* ServiceCell.xib */; };
+		A657DFDC2991677300BD7F84 /* ServiceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A657DFDA2991677300BD7F84 /* ServiceCell.swift */; };
+		A657DFDF2991680700BD7F84 /* ServiceCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A657DFDD2991680700BD7F84 /* ServiceCollectionViewCell.swift */; };
+		A657DFE02991680700BD7F84 /* ServiceCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A657DFDE2991680700BD7F84 /* ServiceCollectionViewCell.xib */; };
+		A657DFE329916C2F00BD7F84 /* BodyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A657DFE129916C2F00BD7F84 /* BodyCell.swift */; };
+		A657DFE429916C2F00BD7F84 /* BodyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A657DFE229916C2F00BD7F84 /* BodyCell.xib */; };
+		A6696C3929A287E300A4B8DC /* Sounds in Resources */ = {isa = PBXBuildFile; fileRef = A6696C3829A287E300A4B8DC /* Sounds */; };
+		A6A8915E29A1F19D008A0D1F /* FaceOtherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A8915C29A1F19D008A0D1F /* FaceOtherCell.swift */; };
+		A6A8915F29A1F19D008A0D1F /* FaceOtherCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6A8915D29A1F19D008A0D1F /* FaceOtherCell.xib */; };
+		A6ECAD6529A9305F00C3A590 /* music_background1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A6ECAD6429A9305F00C3A590 /* music_background1.mp3 */; };
+		A6F08DE229A509DE0010EE85 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F08DE129A509DE0010EE85 /* SplashScreen.swift */; };
+		A6FA8C2D2993F7760019C78B /* FaceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FA8C2B2993F7760019C78B /* FaceCell.swift */; };
+		A6FA8C2E2993F7760019C78B /* FaceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6FA8C2C2993F7760019C78B /* FaceCell.xib */; };
+		A6FA8C312993FC6F0019C78B /* OtherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FA8C2F2993FC6F0019C78B /* OtherCell.swift */; };
+		A6FA8C322993FC6F0019C78B /* OtherCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6FA8C302993FC6F0019C78B /* OtherCell.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A60B22D8298E1A670046A2F6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A60B22AC298E1A650046A2F6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A60B22B3298E1A650046A2F6;
+			remoteInfo = Chibi;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		486128352D42A6A500226049 /* GoogleMobileAds.xcframework */ = {isa = PBXFileReference; expectedSignature = "AppleDeveloperProgram:EQHXZ8M8AV:Google LLC"; lastKnownFileType = wrapper.xcframework; path = GoogleMobileAds.xcframework; sourceTree = "<group>"; };
+		48EAC2102D4296C700EABC43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A60B22B4298E1A650046A2F6 /* Chibi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chibi.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A60B22B7298E1A650046A2F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A60B22B9298E1A650046A2F6 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		A60B22BB298E1A650046A2F6 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
+		A60B22BD298E1A650046A2F6 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		A60B22BF298E1A650046A2F6 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		A60B22C2298E1A650046A2F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A60B22C4298E1A670046A2F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A60B22C7298E1A670046A2F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A60B22D1298E1A670046A2F6 /* ChibiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChibiTests.swift; sourceTree = "<group>"; };
+		A60B22D7298E1A670046A2F6 /* ChibiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChibiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A60B22DB298E1A670046A2F6 /* ChibiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChibiUITests.swift; sourceTree = "<group>"; };
+		A60B22DD298E1A670046A2F6 /* ChibiUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChibiUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A60B22EA298E1C9B0046A2F6 /* Images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Images; sourceTree = "<group>"; };
+		A62666DA299BF697004D1F77 /* MouthCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MouthCell.swift; sourceTree = "<group>"; };
+		A62666DB299BF697004D1F77 /* MouthCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MouthCell.xib; sourceTree = "<group>"; };
+		A657DFD529915CBB00BD7F84 /* PlayerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayerCell.xib; sourceTree = "<group>"; };
+		A657DFD729915E0F00BD7F84 /* PlayerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerCell.swift; sourceTree = "<group>"; };
+		A657DFD92991677300BD7F84 /* ServiceCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ServiceCell.xib; sourceTree = "<group>"; };
+		A657DFDA2991677300BD7F84 /* ServiceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceCell.swift; sourceTree = "<group>"; };
+		A657DFDD2991680700BD7F84 /* ServiceCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceCollectionViewCell.swift; sourceTree = "<group>"; };
+		A657DFDE2991680700BD7F84 /* ServiceCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ServiceCollectionViewCell.xib; sourceTree = "<group>"; };
+		A657DFE129916C2F00BD7F84 /* BodyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyCell.swift; sourceTree = "<group>"; };
+		A657DFE229916C2F00BD7F84 /* BodyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BodyCell.xib; sourceTree = "<group>"; };
+		A6696C3829A287E300A4B8DC /* Sounds */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Sounds; sourceTree = "<group>"; };
+		A6A8915C29A1F19D008A0D1F /* FaceOtherCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceOtherCell.swift; sourceTree = "<group>"; };
+		A6A8915D29A1F19D008A0D1F /* FaceOtherCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FaceOtherCell.xib; sourceTree = "<group>"; };
+		A6ECAD6429A9305F00C3A590 /* music_background1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = music_background1.mp3; sourceTree = "<group>"; };
+		A6F08DE129A509DE0010EE85 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
+		A6FA8C2B2993F7760019C78B /* FaceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceCell.swift; sourceTree = "<group>"; };
+		A6FA8C2C2993F7760019C78B /* FaceCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FaceCell.xib; sourceTree = "<group>"; };
+		A6FA8C2F2993FC6F0019C78B /* OtherCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherCell.swift; sourceTree = "<group>"; };
+		A6FA8C302993FC6F0019C78B /* OtherCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OtherCell.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A60B22B1298E1A650046A2F6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				486128362D42A6A500226049 /* GoogleMobileAds.xcframework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A60B22D4298E1A670046A2F6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A60B22AB298E1A650046A2F6 = {
+			isa = PBXGroup;
+			children = (
+				486128352D42A6A500226049 /* GoogleMobileAds.xcframework */,
+				A60B22B6298E1A650046A2F6 /* Chibi */,
+				A60B22D0298E1A670046A2F6 /* ChibiTests */,
+				A60B22DA298E1A670046A2F6 /* ChibiUITests */,
+				A60B22B5298E1A650046A2F6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A60B22B5298E1A650046A2F6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A60B22B4298E1A650046A2F6 /* Chibi.app */,
+				A60B22D7298E1A670046A2F6 /* ChibiUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A60B22B6298E1A650046A2F6 /* Chibi */ = {
+			isa = PBXGroup;
+			children = (
+				48EAC2102D4296C700EABC43 /* Info.plist */,
+				A6ECAD6429A9305F00C3A590 /* music_background1.mp3 */,
+				A6696C3829A287E300A4B8DC /* Sounds */,
+				A657DFDD2991680700BD7F84 /* ServiceCollectionViewCell.swift */,
+				A657DFDE2991680700BD7F84 /* ServiceCollectionViewCell.xib */,
+				A657DFDA2991677300BD7F84 /* ServiceCell.swift */,
+				A657DFD92991677300BD7F84 /* ServiceCell.xib */,
+				A60B22B7298E1A650046A2F6 /* AppDelegate.swift */,
+				A60B22B9298E1A650046A2F6 /* GameScene.sks */,
+				A60B22BB298E1A650046A2F6 /* Actions.sks */,
+				A60B22BD298E1A650046A2F6 /* GameScene.swift */,
+				A60B22BF298E1A650046A2F6 /* GameViewController.swift */,
+				A657DFE129916C2F00BD7F84 /* BodyCell.swift */,
+				A657DFE229916C2F00BD7F84 /* BodyCell.xib */,
+				A60B22C1298E1A650046A2F6 /* Main.storyboard */,
+				A60B22C4298E1A670046A2F6 /* Assets.xcassets */,
+				A60B22EA298E1C9B0046A2F6 /* Images */,
+				A60B22C6298E1A670046A2F6 /* LaunchScreen.storyboard */,
+				A657DFD529915CBB00BD7F84 /* PlayerCell.xib */,
+				A657DFD729915E0F00BD7F84 /* PlayerCell.swift */,
+				A6FA8C2B2993F7760019C78B /* FaceCell.swift */,
+				A6FA8C2C2993F7760019C78B /* FaceCell.xib */,
+				A6FA8C2F2993FC6F0019C78B /* OtherCell.swift */,
+				A6FA8C302993FC6F0019C78B /* OtherCell.xib */,
+				A62666DA299BF697004D1F77 /* MouthCell.swift */,
+				A62666DB299BF697004D1F77 /* MouthCell.xib */,
+				A6A8915C29A1F19D008A0D1F /* FaceOtherCell.swift */,
+				A6A8915D29A1F19D008A0D1F /* FaceOtherCell.xib */,
+				A6F08DE129A509DE0010EE85 /* SplashScreen.swift */,
+			);
+			path = Chibi;
+			sourceTree = "<group>";
+		};
+		A60B22D0298E1A670046A2F6 /* ChibiTests */ = {
+			isa = PBXGroup;
+			children = (
+				A60B22D1298E1A670046A2F6 /* ChibiTests.swift */,
+			);
+			path = ChibiTests;
+			sourceTree = "<group>";
+		};
+		A60B22DA298E1A670046A2F6 /* ChibiUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A60B22DB298E1A670046A2F6 /* ChibiUITests.swift */,
+				A60B22DD298E1A670046A2F6 /* ChibiUITestsLaunchTests.swift */,
+			);
+			path = ChibiUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A60B22B3298E1A650046A2F6 /* Chibi */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A60B22E1298E1A670046A2F6 /* Build configuration list for PBXNativeTarget "Chibi" */;
+			buildPhases = (
+				A60B22B0298E1A650046A2F6 /* Sources */,
+				A60B22B1298E1A650046A2F6 /* Frameworks */,
+				A60B22B2298E1A650046A2F6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Chibi;
+			productName = Chibi;
+			productReference = A60B22B4298E1A650046A2F6 /* Chibi.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A60B22D6298E1A670046A2F6 /* ChibiUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A60B22E7298E1A670046A2F6 /* Build configuration list for PBXNativeTarget "ChibiUITests" */;
+			buildPhases = (
+				A60B22D3298E1A670046A2F6 /* Sources */,
+				A60B22D4298E1A670046A2F6 /* Frameworks */,
+				A60B22D5298E1A670046A2F6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A60B22D9298E1A670046A2F6 /* PBXTargetDependency */,
+			);
+			name = ChibiUITests;
+			productName = ChibiUITests;
+			productReference = A60B22D7298E1A670046A2F6 /* ChibiUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A60B22AC298E1A650046A2F6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					A60B22B3298E1A650046A2F6 = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+					A60B22D6298E1A670046A2F6 = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = A60B22B3298E1A650046A2F6;
+					};
+				};
+			};
+			buildConfigurationList = A60B22AF298E1A650046A2F6 /* Build configuration list for PBXProject "Chibi" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A60B22AB298E1A650046A2F6;
+			packageReferences = (
+			);
+			productRefGroup = A60B22B5298E1A650046A2F6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A60B22B3298E1A650046A2F6 /* Chibi */,
+				A60B22D6298E1A670046A2F6 /* ChibiUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A60B22B2298E1A650046A2F6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A6696C3929A287E300A4B8DC /* Sounds in Resources */,
+				A62666DD299BF697004D1F77 /* MouthCell.xib in Resources */,
+				A6ECAD6529A9305F00C3A590 /* music_background1.mp3 in Resources */,
+				A60B22C3298E1A650046A2F6 /* Main.storyboard in Resources */,
+				A657DFDB2991677300BD7F84 /* ServiceCell.xib in Resources */,
+				A60B22BA298E1A650046A2F6 /* GameScene.sks in Resources */,
+				A657DFE429916C2F00BD7F84 /* BodyCell.xib in Resources */,
+				A6FA8C322993FC6F0019C78B /* OtherCell.xib in Resources */,
+				A6FA8C2E2993F7760019C78B /* FaceCell.xib in Resources */,
+				A657DFE02991680700BD7F84 /* ServiceCollectionViewCell.xib in Resources */,
+				A60B22C5298E1A670046A2F6 /* Assets.xcassets in Resources */,
+				A6A8915F29A1F19D008A0D1F /* FaceOtherCell.xib in Resources */,
+				A657DFD629915CBB00BD7F84 /* PlayerCell.xib in Resources */,
+				A60B22C8298E1A670046A2F6 /* LaunchScreen.storyboard in Resources */,
+				A60B22EB298E1C9B0046A2F6 /* Images in Resources */,
+				A60B22BC298E1A650046A2F6 /* Actions.sks in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A60B22D5298E1A670046A2F6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A60B22B0298E1A650046A2F6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A6F08DE229A509DE0010EE85 /* SplashScreen.swift in Sources */,
+				A6FA8C312993FC6F0019C78B /* OtherCell.swift in Sources */,
+				A6FA8C2D2993F7760019C78B /* FaceCell.swift in Sources */,
+				A60B22BE298E1A650046A2F6 /* GameScene.swift in Sources */,
+				A60B22C0298E1A650046A2F6 /* GameViewController.swift in Sources */,
+				A657DFDC2991677300BD7F84 /* ServiceCell.swift in Sources */,
+				A62666DC299BF697004D1F77 /* MouthCell.swift in Sources */,
+				A6A8915E29A1F19D008A0D1F /* FaceOtherCell.swift in Sources */,
+				A60B22B8298E1A650046A2F6 /* AppDelegate.swift in Sources */,
+				A657DFDF2991680700BD7F84 /* ServiceCollectionViewCell.swift in Sources */,
+				A657DFD829915E0F00BD7F84 /* PlayerCell.swift in Sources */,
+				A657DFE329916C2F00BD7F84 /* BodyCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A60B22D3298E1A670046A2F6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A60B22DE298E1A670046A2F6 /* ChibiUITestsLaunchTests.swift in Sources */,
+				A60B22DC298E1A670046A2F6 /* ChibiUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A60B22D9298E1A670046A2F6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A60B22B3298E1A650046A2F6 /* Chibi */;
+			targetProxy = A60B22D8298E1A670046A2F6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A60B22C1298E1A650046A2F6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A60B22C2298E1A650046A2F6 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A60B22C6298E1A670046A2F6 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A60B22C7298E1A670046A2F6 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A60B22DF298E1A670046A2F6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A60B22E0298E1A670046A2F6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A60B22E2298E1A670046A2F6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 47JG3M6R2V;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Chibi/Info.plist;
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "we need access save image";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UIStatusBarHidden = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationLandscapeRight;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.game.Chibi;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A60B22E3298E1A670046A2F6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 47JG3M6R2V;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Chibi/Info.plist;
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "we need access save image";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UIStatusBarHidden = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationLandscapeRight;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.game.Chibi;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A60B22E8298E1A670046A2F6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.game.ChibiUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Chibi;
+			};
+			name = Debug;
+		};
+		A60B22E9298E1A670046A2F6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.game.ChibiUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Chibi;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A60B22AF298E1A650046A2F6 /* Build configuration list for PBXProject "Chibi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A60B22DF298E1A670046A2F6 /* Debug */,
+				A60B22E0298E1A670046A2F6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A60B22E1298E1A670046A2F6 /* Build configuration list for PBXNativeTarget "Chibi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A60B22E2298E1A670046A2F6 /* Debug */,
+				A60B22E3298E1A670046A2F6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A60B22E7298E1A670046A2F6 /* Build configuration list for PBXNativeTarget "ChibiUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A60B22E8298E1A670046A2F6 /* Debug */,
+				A60B22E9298E1A670046A2F6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A60B22AC298E1A650046A2F6 /* Project object */;
+}
