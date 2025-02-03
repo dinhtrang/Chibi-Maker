@@ -15,6 +15,7 @@ import AVFoundation
 class GameViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     var bannerView: GADBannerView!
+    var viewBanner: UIView!
     var scene: GameScene?
     var selectImage: String = ""
     var selectIndex: Int = 0
@@ -396,46 +397,31 @@ class GameViewController: UIViewController, UICollectionViewDataSource, UICollec
     
     func addBannerViewToView(_ bannerView: GADBannerView) {
         bannerView.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(bannerView)
+        viewBanner.addSubview(bannerView)
         // This example doesn't give width or height constraints, as the provided
         // ad size gives the banner an intrinsic content size to size the view.
-        view.addConstraints(
-          [NSLayoutConstraint(item: bannerView,
-                              attribute: .bottom,
-                              relatedBy: .equal,
-                              toItem: view.safeAreaLayoutGuide,
-                              attribute: .bottom,
-                              multiplier: 1,
-                              constant: 0),
-          NSLayoutConstraint(item: bannerView,
-                              attribute: .centerX,
-                              relatedBy: .equal,
-                              toItem: view,
-                              attribute: .centerX,
-                              multiplier: 1,
-                              constant: 0)
-          ])
+//        viewBanner.addConstraints(
+//          [NSLayoutConstraint(item: bannerView,
+//                              attribute: .bottom,
+//                              relatedBy: .equal,
+//                              toItem: view.safeAreaLayoutGuide,
+//                              attribute: .bottom,
+//                              multiplier: 1,
+//                              constant: 0),
+//          NSLayoutConstraint(item: bannerView,
+//                              attribute: .centerX,
+//                              relatedBy: .equal,
+//                              toItem: view,
+//                              attribute: .centerX,
+//                              multiplier: 1,
+//                              constant: 0)
+//          ])
       }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let viewWidth = view.frame.inset(by: view.safeAreaInsets).width
-
-          // Here the current interface orientation is used. Use
-          // GADLandscapeAnchoredAdaptiveBannerAdSizeWithWidth or
-          // GADPortraitAnchoredAdaptiveBannerAdSizeWithWidth if you prefer to load an ad of a
-          // particular orientation,
-          let adaptiveSize = GADCurrentOrientationAnchoredAdaptiveBannerAdSizeWithWidth(viewWidth)
-          bannerView = GADBannerView(adSize: adaptiveSize)
-
-          addBannerViewToView(bannerView)
-        bannerView.adSize = GADCurrentOrientationAnchoredAdaptiveBannerAdSizeWithWidth(viewWidth)
-
-        bannerView.adUnitID = "ca-app-pub-8740356244682464/6097060559"
-         bannerView.rootViewController = self
-
-         bannerView.load(GADRequest())
+       
         
         
         
@@ -461,10 +447,12 @@ class GameViewController: UIViewController, UICollectionViewDataSource, UICollec
 
                 
                 
-                let viewSelect = UIView(frame: CGRect.init(x: 265, y: 15, width: widtdViewSelect - 20, height: UIScreen.main.bounds.size.height - 15 - 15))
+                let viewSelect = UIView(frame: CGRect.init(x: 265, y:  50, width: widtdViewSelect - 20, height: UIScreen.main.bounds.size.height - 15 - 50))
                 viewSelect.backgroundColor = UIColor.white
                 scView = UIScrollView(frame: CGRect.init(x: 0, y: 10, width: viewSelect.frame.size.width, height: 60))
                 scView.backgroundColor = UIColor.white
+
+//                scView.setContentOffset(CGPoint.init(x: 0, y: 20), animated: true)
 //                topView.addSubview(scViewOther)
 //                topView.addSubview(scView)
                 viewSelect.addSubview(scView)
@@ -496,11 +484,14 @@ class GameViewController: UIViewController, UICollectionViewDataSource, UICollec
                 
                 scView.contentSize = CGSize(width: xOffset, height: scView.frame.height)
 //                collectionView.backgroundColor = UIColor.yellow
+                
+                collectionView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 40, right: 0)
+
                 viewSelect.addSubview(collectionView)
                 
                 
-                let originY = UIScreen.main.bounds.size.height - 100
-                let viewBottom = UIView(frame: CGRect.init(x: 0, y: originY, width: collectionView.frame.size.width, height: 70))
+                let originY = UIScreen.main.bounds.size.height - 100 - 12
+                let viewBottom = UIView(frame: CGRect.init(x: 0, y: originY, width: collectionView.frame.size.width, height:40))
 //                viewBottom.backgroundColor = UIColor.green
                 
                 let divView = UIView(frame: CGRect.init(x: 0, y: 0, width: collectionView.frame.size.width, height: 0.75))
@@ -511,15 +502,16 @@ class GameViewController: UIViewController, UICollectionViewDataSource, UICollec
                 let wItemBtn = (widtdViewSelect - 80)/4
                 print("width Item \(wItemBtn)")
                 
-                let btnBack = UIButton(frame: CGRect.init(x: 5, y: 15, width: wItemBtn, height: 50))
+                let btnBack = UIButton(frame: CGRect.init(x: 5, y: 0, width: wItemBtn, height: 40))
                 btnBack.setImage(UIImage.init(named: "back.png"), for: .normal)
                 btnBack.imageView?.contentMode = .scaleAspectFit
                 btnBack.addTarget(self, action: #selector(backAction), for: .touchUpInside)
                 viewBottom.addSubview(btnBack)
+                viewBottom.backgroundColor = .blue
                 
                 
                 
-                let buttonRandom = UIButton(frame: CGRect.init(x: 5 + wItemBtn + 10, y: 15, width: wItemBtn, height: 50))
+                let buttonRandom = UIButton(frame: CGRect.init(x: 5 + wItemBtn + 10, y: 0, width: wItemBtn, height: 40))
                 buttonRandom.setImage(UIImage.init(named: "random.png"), for: .normal)
                 buttonRandom.imageView?.contentMode = .scaleAspectFit
                 buttonRandom.addTarget(self, action: #selector(randomAction), for: .touchUpInside)
@@ -528,7 +520,7 @@ class GameViewController: UIViewController, UICollectionViewDataSource, UICollec
                 
                 let originXbtnNext = viewBottom.frame.origin.x + viewBottom.frame.size.width - wItemBtn - 5
                 
-                let btnNext = UIButton(frame: CGRect.init(x: originXbtnNext, y: 15, width: wItemBtn, height: 50))
+                let btnNext = UIButton(frame: CGRect.init(x: originXbtnNext, y: 0, width: wItemBtn, height: 40))
                 btnNext.setImage(UIImage.init(named: "next.png"), for: .normal)
                 btnNext.imageView?.contentMode = .scaleAspectFit
                 
@@ -537,8 +529,8 @@ class GameViewController: UIViewController, UICollectionViewDataSource, UICollec
                 viewBottom.addSubview(btnNext)
                 
                 
-                let btnSave = UIButton(frame: CGRect.init(x: originXbtnNext - wItemBtn - 10, y: 18
-                                                          , width: wItemBtn, height: 50))
+                let btnSave = UIButton(frame: CGRect.init(x: originXbtnNext - wItemBtn - 10, y: 0
+                                                          , width: wItemBtn, height: 40))
                 btnSave.setImage(UIImage.init(named: "btnSave.png"), for: .normal)
 //                btnSave.buttonType = .
                 btnSave.adjustsImageWhenHighlighted = false
@@ -567,6 +559,31 @@ class GameViewController: UIViewController, UICollectionViewDataSource, UICollec
                     view.showsFPS = true
                     view.showsNodeCount = true
                     view.addSubview(viewSelect)
+                    
+                    viewBanner = UIView(frame: CGRect.init(x: 265, y: 0, width: widtdViewSelect - 20, height: 50))
+                    viewBanner.backgroundColor = .yellow
+                    view.addSubview(viewBanner)
+                    
+                    
+                    let viewWidth = view.frame.inset(by: view.safeAreaInsets).width
+
+                      // Here the current interface orientation is used. Use
+                      // GADLandscapeAnchoredAdaptiveBannerAdSizeWithWidth or
+                      // GADPortraitAnchoredAdaptiveBannerAdSizeWithWidth if you prefer to load an ad of a
+                      // particular orientation,
+                      let adaptiveSize = GADCurrentOrientationAnchoredAdaptiveBannerAdSizeWithWidth(viewWidth)
+                      bannerView = GADBannerView(adSize: adaptiveSize)
+
+            //          addBannerViewToView(bannerView)
+                    bannerView.adSize = GADCurrentOrientationAnchoredAdaptiveBannerAdSizeWithWidth(viewWidth)
+
+                    bannerView.adUnitID = "ca-app-pub-8740356244682464/6097060559"
+                     bannerView.rootViewController = self
+
+                     bannerView.load(GADRequest())
+                    
+                    addBannerViewToView(bannerView)
+                    
 //                    view.addSubview(btnRandom)
                     //                    viewSelect.isHidden = true
                 }

@@ -14,8 +14,8 @@
             filePath = "Chibi/GameViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "722"
-            endingLineNumber = "722"
+            startingLineNumber = "739"
+            endingLineNumber = "739"
             landmarkName = "shareAtion(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -30,8 +30,8 @@
             filePath = "Chibi/GameViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "711"
-            endingLineNumber = "711"
+            startingLineNumber = "728"
+            endingLineNumber = "728"
             landmarkName = "shareAtion(_:)"
             landmarkType = "7">
          </BreakpointContent>

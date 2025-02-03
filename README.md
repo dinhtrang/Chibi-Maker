@@ -1,2 +1,0 @@
-# Chibi-Maker
-chibi
